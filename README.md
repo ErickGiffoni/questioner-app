@@ -18,4 +18,4 @@ Basta executar o seguinte comando na raíz do projeto:
 Uma janela do seu navegador padrão deve abrir no localhost, na porta 3000.
 
 ## The team:
-Fabrício Monteiro - Érick Giffoni - Cosmo Lustosa - Lucas
+Fabrício Monteiro - Érick Giffoni - Cosmo Lustosa - Lucas Lopes
