@@ -5,7 +5,7 @@ Esta aplicação tem como finalidade atender as demandas do projeto final da dis
 ## Primeiros passos:
 Execute o seguinte comando via terminal (prompt de comando) na pasta desejada do seu OS:
 
-    git clone [url do repositório]
+    git clone https://github.com/fabmont/questioner-app.git
 Feito isso, você deve instalar as dependências que o projeto necessita. Dentro da pasta em que foi clonado este repositório, execute no terminal:
 
     npm install
