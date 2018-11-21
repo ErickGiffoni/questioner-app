@@ -17,5 +17,8 @@ Basta executar o seguinte comando na raíz do projeto:
     npm start
 Uma janela do seu navegador padrão deve abrir no localhost, na porta 3000.
 
+## Considerações finais:
+É importante que commits sejam feitos a cada nova implementação feita pelos devs do projeto. A branch 'development' será utilizada para criar e manter o software. A cada versão estável que este app atingir será feito um merge na branch 'master' que será a release do projeto.
+
 ## The team:
 Fabrício Monteiro - Érick Giffoni - Cosmo Lustosa - Lucas Lopes
