@@ -12,7 +12,7 @@ Feito isso, você já estará apto para programar novas funcionalidades.
 É recomendado o uso da IDE Netbeans, visto que o editor de interface gráfica do Swing é a grande atração.
 
 ## Considerações finais:
-É importante que commits sejam feitos a cada nova implementação feita pelos devs do projeto. A branch 'development' será utilizada para criar e manter o software. A cada versão estável que este app atingir será feito um merge na branch 'master' que será a release do projeto.
+É importante que commits sejam feitos a cada nova implementação feita pelos devs do projeto. A branch 'workflux' será utilizada para criar e manter o software. A cada versão estável que este app atingir será feito um merge na branch 'master' que será a release do projeto.
 
 ## The team:
 Fabrício Monteiro - Érick Giffoni - Cosmo Lustosa - Lucas Lopes
