@@ -1,15 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package fomulario;
+package questao.fechada;
+import questao.Questao;
 
-/**
- *
- * @author lucas
- */
-public class Lista extends Pergunta {
+public class Lista extends Questao {
     
     protected String[] lista= new String[0];
 

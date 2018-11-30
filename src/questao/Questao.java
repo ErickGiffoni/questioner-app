@@ -1,21 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package fomulario;
+package questao;
 
-/**
- *
- * @author lucas
- */
-public class Pergunta {
+public class Questao {
 
     private String titulo;
     private String Descricao;
      
-
-    public Pergunta(String titulo, String Descricao) {
+    public Questao(String titulo, String Descricao) {
         this.titulo = titulo;
         this.Descricao = Descricao;
     }
