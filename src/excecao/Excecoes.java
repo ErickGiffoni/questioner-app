@@ -9,6 +9,6 @@ package excecao;
  *
  * @author lucas
  */
-public class Excecoes extends Exception {
+public class DescricaoObrigatoriaNaoInformadaException extends Exception {
     
 }
