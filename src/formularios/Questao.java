@@ -12,19 +12,19 @@ public class Questao {
     
     public Questao(){};//construtor vazio
 
-    public String getnome() {
+    public String getNome() {
         return nome;
     }
 
-    public void setnome(String nome) {
+    public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public String getenunciado() {
+    public String getEnunciado() {
         return enunciado;
     }
 
-    public void setenunciado(String enunciado) {
+    public void setEnunciado(String enunciado) {
         this.enunciado = enunciado;
     }
    
