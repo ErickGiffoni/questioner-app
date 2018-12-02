@@ -9,6 +9,8 @@ public class Questao {
         this.nome = nome;
         this.enunciado = enunciado;
     }
+    
+    public Questao(){};//construtor vazio
 
     public String getnome() {
         return nome;
