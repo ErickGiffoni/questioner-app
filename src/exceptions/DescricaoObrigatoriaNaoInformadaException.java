@@ -3,7 +3,7 @@ package exceptions;
 public class DescricaoObrigatoriaNaoInformadaException extends Exception{
 
     @Override
-    public void Exception(String Nome) {
+    public void Exception() {
         setNome("Descrição obrigatória não foi informada");
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }

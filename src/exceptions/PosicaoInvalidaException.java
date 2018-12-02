@@ -12,7 +12,7 @@ package exceptions;
 public class PosicaoInvalidaException extends Exception{
 
     @Override
-    public void Exception(String Nome) {
+    public void Exception() {
         setNome("Posição Inválida Infomrada");
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }

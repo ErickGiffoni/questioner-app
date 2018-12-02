@@ -9,7 +9,7 @@ public class RespostaNaoSelecionadaException extends Exception{
     }
 
     @Override
-    public void Exception(String Nome) {
+    public void Exception() {
         setNome("Resposta não foi selecionada");
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
