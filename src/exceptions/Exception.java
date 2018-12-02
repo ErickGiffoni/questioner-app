@@ -9,11 +9,16 @@ package exceptions;
  *
  * @author erick.giffoni
  */
-public abstract class Exception {
+public abstract class Exception extends java.lang.Exception{
     private String nome;
-    public Exception(String Nome){
-        this.nome = Nome;
-    }//construtor da classe abstrata
+    public abstract void Exception(String Nome);//construtor da classe abstrata
     public  abstract String toString();//metodo abstrato toString
+    
+    public String getNome(){
+        return this.nome;
+    }
+    public void setNome(String Nome){
+        this.nome = Nome;
+    }
     
 }//end of class Exception
