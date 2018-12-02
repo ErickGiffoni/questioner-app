@@ -59,12 +59,12 @@ public class Lista extends Fechada {
         this.respostaFoiSelecionada = simOuNao;
     }//end of setRespostaFoiSelecionada
     
-    protected void addLista(String []li){
-      alternativas= li; 
-    }
-    protected String [] retLista(){
-        return alternativas;
-    } 
+    //protected void addLista(String []li){
+      //alternativas= li; 
+    //}
+    //protected String [] retLista(){
+        //return alternativas;
+    //} 
     
     
 }
