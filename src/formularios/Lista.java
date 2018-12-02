@@ -13,7 +13,7 @@ public class Lista extends Fechada {
         super(nome, enunciado, numeroDeAlternativas);
     }
     
-    public Lista(){};//construtor simples
+    public Lista(){super();};//construtor simples
     
     public String getAlternativas(int posicao){
         try{
