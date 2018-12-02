@@ -17,4 +17,14 @@ public class Fechada extends Questao{
     public void setNumeroDeAlternativas(int numero){
         this.numeroDeAlternativas = numero;
     }
+    
+    public Fechada(){
+        super();
+    }//construtor vazio
+    
+    public Fechada(String nome, String enunciado, int numeroDeAlternativas){
+        super(nome, enunciado);
+        this.numeroDeAlternativas = numeroDeAlternativas;
+    }
+    
 }
