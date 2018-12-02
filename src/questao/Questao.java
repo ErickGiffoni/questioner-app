@@ -2,28 +2,28 @@ package questao;
 
 public class Questao {
 
-    private String titulo;
-    private String Descricao;
+    public String nome;
+    public String enunciado;
      
-    public Questao(String titulo, String Descricao) {
-        this.titulo = titulo;
-        this.Descricao = Descricao;
+    public Questao(String nome, String enunciado) {
+        this.nome = nome;
+        this.enunciado = enunciado;
     }
 
-    public String getTitulo() {
-        return titulo;
+    public String getnome() {
+        return nome;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public void setnome(String nome) {
+        this.nome = nome;
     }
 
-    public String getDescricao() {
-        return Descricao;
+    public String getenunciado() {
+        return enunciado;
     }
 
-    public void setDescricao(String Descricao) {
-        this.Descricao = Descricao;
+    public void setenunciado(String enunciado) {
+        this.enunciado = enunciado;
     }
    
 
