@@ -21,7 +21,7 @@ public class SelectQuestion extends javax.swing.JFrame {
 
         jLabel1.setText("Tipo da pergunta:");
 
-        selectQuestionType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pergunta aberta curta", "Pergunta aberta longa", "Lista de opções", "Alternativa", "Exclusiva", "Opcional (sim ou não)" }));
+        selectQuestionType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pergunta aberta", "Lista de opções", "Alternativa", "Exclusiva", "Opcional (sim ou não)" }));
 
         nextBtn.setText("Continuar");
         nextBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -62,7 +62,30 @@ public class SelectQuestion extends javax.swing.JFrame {
 
     private void nextBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextBtnActionPerformed
         OpenQuestion open = new OpenQuestion();
-        open.setVisible(true);
+        ListQuestion list = new ListQuestion();
+        AlternativaQuestion alternativa = new AlternativaQuestion();
+        ExclusivaQuestion exclusive = new ExclusivaQuestion();
+        OpcionalQuestion opcional = new OpcionalQuestion();
+        
+        int comboBoxSelectedItem = selectQuestionType.getSelectedIndex();
+        
+        switch (comboBoxSelectedItem) {
+            case 0:
+                open.setVisible(true);
+                break;
+            case 1:
+                list.setVisible(true);
+                break;
+            case 2:
+                alternativa.setVisible(true);
+                break;
+            case 3:
+                exclusive.setVisible(true);
+                break;
+            case 4: 
+                opcional.setVisible(true);
+                break;
+        }
     }//GEN-LAST:event_nextBtnActionPerformed
 
     public static void main(String args[]) {

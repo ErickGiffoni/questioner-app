@@ -1,8 +1,8 @@
 package view.createNew;
 
-public class ListQuestion extends javax.swing.JFrame {
+public class ExclusivaQuestion extends javax.swing.JFrame {
 
-    public ListQuestion() {
+    public ExclusivaQuestion() {
         initComponents();
         setLocationRelativeTo(null);
     }
@@ -11,26 +11,26 @@ public class ListQuestion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        txtTitle = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         txtListItems = new javax.swing.JTextArea();
         btnCreateQuestion = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        txtTitle = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Pergunta em lista");
+        setTitle("Pergunta exclusiva");
         setResizable(false);
 
-        jLabel1.setText("Título da pergunta:");
-
-        jLabel2.setText("Insira os itens da lista (um item por linha):");
+        jLabel2.setText("Insira as opções da pergunta (um item por linha):");
 
         txtListItems.setColumns(20);
         txtListItems.setRows(5);
         jScrollPane2.setViewportView(txtListItems);
 
         btnCreateQuestion.setText("Criar pergunta");
+
+        jLabel1.setText("Título da pergunta:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -44,7 +44,7 @@ public class ListQuestion extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addComponent(jLabel2))
-                        .addGap(0, 268, Short.MAX_VALUE))
+                        .addGap(0, 196, Short.MAX_VALUE))
                     .addComponent(jScrollPane2)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -74,7 +74,7 @@ public class ListQuestion extends javax.swing.JFrame {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ListQuestion().setVisible(true);
+                new ExclusivaQuestion().setVisible(true);
             }
         });
     }
