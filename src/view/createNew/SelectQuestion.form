@@ -63,13 +63,12 @@
     <Component class="javax.swing.JComboBox" name="selectQuestionType">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="6">
-            <StringItem index="0" value="Pergunta aberta curta"/>
-            <StringItem index="1" value="Pergunta aberta longa"/>
-            <StringItem index="2" value="Lista de op&#xe7;&#xf5;es"/>
-            <StringItem index="3" value="Alternativa"/>
-            <StringItem index="4" value="Exclusiva"/>
-            <StringItem index="5" value="Opcional (sim ou n&#xe3;o)"/>
+          <StringArray count="5">
+            <StringItem index="0" value="Pergunta aberta"/>
+            <StringItem index="1" value="Lista de op&#xe7;&#xf5;es"/>
+            <StringItem index="2" value="Alternativa"/>
+            <StringItem index="3" value="Exclusiva"/>
+            <StringItem index="4" value="Opcional (sim ou n&#xe3;o)"/>
           </StringArray>
         </Property>
       </Properties>
