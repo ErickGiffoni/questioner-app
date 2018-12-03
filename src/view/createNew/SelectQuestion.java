@@ -64,6 +64,8 @@ public class SelectQuestion extends javax.swing.JFrame {
         OpenQuestion open = new OpenQuestion();
         ListQuestion list = new ListQuestion();
         AlternativaQuestion alternativa = new AlternativaQuestion();
+        ExclusivaQuestion exclusive = new ExclusivaQuestion();
+        OpcionalQuestion opcional = new OpcionalQuestion();
         
         int comboBoxSelectedItem = selectQuestionType.getSelectedIndex();
         
@@ -78,8 +80,10 @@ public class SelectQuestion extends javax.swing.JFrame {
                 alternativa.setVisible(true);
                 break;
             case 3:
+                exclusive.setVisible(true);
                 break;
             case 4: 
+                opcional.setVisible(true);
                 break;
         }
     }//GEN-LAST:event_nextBtnActionPerformed
