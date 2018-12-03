@@ -24,7 +24,7 @@ public class AlternativaQuestion extends javax.swing.JFrame {
 
         jLabel1.setText("Título da pergunta:");
 
-        jLabel2.setText("Insira as alternativas (um item por linha):");
+        jLabel2.setText("Insira as alternativas da pergunta (um item por linha):");
 
         txtListItems.setColumns(20);
         txtListItems.setRows(5);
@@ -44,7 +44,7 @@ public class AlternativaQuestion extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addComponent(jLabel2))
-                        .addGap(0, 262, Short.MAX_VALUE))
+                        .addGap(0, 174, Short.MAX_VALUE))
                     .addComponent(jScrollPane2)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
