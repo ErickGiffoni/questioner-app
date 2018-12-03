@@ -19,6 +19,7 @@ public class ListQuestion extends javax.swing.JFrame {
         btnCreateQuestion = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Pergunta em lista");
         setResizable(false);
 
         jLabel1.setText("Título da pergunta:");
