@@ -17,7 +17,7 @@ public class TextField implements ActionListener {
         f= new JFrame(Formulario);
         
         f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        f.setLayout(new FlowLayout());
+            f.setLayout(new FlowLayout());
         lbl = new JLabel(Pergunta);
         tf = new JTextField(30);
         
