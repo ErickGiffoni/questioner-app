@@ -16,7 +16,15 @@ public class CheckBox implements ItemListener, ActionListener {
     JFrame f;
     JButton btn = new JButton("Confirma");
     ArrayList<String> as = new ArrayList<String>();
+    String [] retorno= new String[0];
 
+    public String[] getRetorno() {
+        return retorno;
+    }
+
+    public void setRetorno(String[] retorno) {
+        this.retorno = retorno;
+    }
     public CheckBox(String FormularioNome, String Questao, String[] vetor) {
         f = new JFrame(FormularioNome);
         f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -74,7 +82,12 @@ public class CheckBox implements ItemListener, ActionListener {
             sb.append(al);
             sb.append("\n");
         }
-
+        
+        //arraylist to array
+        String aux[] = new String[as.size()];
+        aux = as.toArray(aux);
+       
+        setRetorno(aux);
         JOptionPane.showMessageDialog(null, sb);
         f.dispose();
     }

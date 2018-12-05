@@ -15,6 +15,15 @@ public class RadioButton implements ActionListener {
     JFrame f;
     JButton jbtn = new JButton("OK");
     JButton radiobutton;
+    String retorno;
+
+    public String getRetorno() {
+        return retorno;
+    }
+
+    public void setRetorno(String retorno) {
+        this.retorno = retorno;
+    }
     public RadioButton(String Formulario, String Pergunta, String[] vetor) {
         f = new JFrame(Formulario);
         f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -56,6 +65,7 @@ public class RadioButton implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
        JRadioButton radiobutton = (JRadioButton) ae.getSource();
         lbl.setText("Selecionado: " + radiobutton.getText());
+        this.setRetorno(radiobutton.getText());
     }
 
 //    public static void main(String[] args) {
