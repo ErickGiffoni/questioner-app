@@ -1,5 +1,9 @@
 package view.createNew;
 
+import formularios.Formulario;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+
 public class NewForm extends javax.swing.JFrame {
 
     public NewForm() {
@@ -110,6 +114,9 @@ public class NewForm extends javax.swing.JFrame {
 
     private void submitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtnActionPerformed
         // Implementar exceções de criação do formulário
+        SimpleDateFormat init = new SimpleDateFormat(txtInitDate.getText());//pega a data inicial
+        SimpleDateFormat end = new SimpleDateFormat(txtEndDate.getText());//pega a data final
+        Formulario form = new Formulario(txtTitle.getText(), txtTitle1.getText(), init, end);//cria o formulario com nome, enun, dataIni, dataFin
         SelectQuestion selectQuestion = new SelectQuestion();
         selectQuestion.setVisible(true);
     }//GEN-LAST:event_submitBtnActionPerformed
