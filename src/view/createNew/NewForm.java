@@ -1,5 +1,6 @@
 package view.createNew;
 
+import exceptions.DataNaoInformadaException;
 import exceptions.DescricaoObrigatoriaNaoInformadaException;
 import exceptions.NomeNaoInformadoException;
 import formularios.Formulario;
@@ -135,11 +136,14 @@ public class NewForm extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "A descrição do formulário deve ser informada.");
 
        }//excecao de enunciado
-       // try{
-            
-       // }catch(){
-            
-       // }//excecao de data
+       try{
+            if(txtInitDate.getText().equals("") == true || txtEndDate.getText().equals("") == true){
+                excecao = false;
+                throw new DataNaoInformadaException();
+            }
+       }catch(DataNaoInformadaException e){
+           JOptionPane.showMessageDialog(null,"As datas do formulário devem ser informadas.");
+       }//excecao de data
        if(excecao){
         SimpleDateFormat init = new SimpleDateFormat(txtInitDate.getText());//pega a data inicial
         SimpleDateFormat end = new SimpleDateFormat(txtEndDate.getText());//pega a data final
