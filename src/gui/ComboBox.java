@@ -15,7 +15,15 @@ public class ComboBox implements ItemListener, ActionListener {
     JLabel lbl;
     JFrame f;
     JButton jbtn = new JButton("ok");
-   
+    String retorno;
+
+    public String getRetorno() {
+        return retorno;
+    }
+
+    public void setRetorno(String retorno) {
+        this.retorno = retorno;
+    }
     public ComboBox(String formulario, String pergunta, String[] vetor) {
         f = new JFrame(formulario);
         f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -40,6 +48,7 @@ public class ComboBox implements ItemListener, ActionListener {
     public void itemStateChanged(ItemEvent ie) {
        Object item = cb.getSelectedItem();
         lbl.setText("selecionado: " + item);
+        this.setRetorno(cb.getSelectedItem().toString());
     }
 
     
@@ -51,6 +60,7 @@ public class ComboBox implements ItemListener, ActionListener {
             JOptionPane.showMessageDialog(null, cb.getSelectedItem());
             f.dispose();
         }
+       
     }
     
 //    public static void main(String[] args) {

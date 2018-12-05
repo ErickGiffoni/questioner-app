@@ -13,6 +13,16 @@ public class TextField implements ActionListener {
  JLabel lbl;
  JFrame f;  
  JButton btn = new JButton("OK");
+
+    public String getRetorno() {
+        return retorno;
+    }
+
+    public void setRetorno(String retorno) {
+        this.retorno = retorno;
+    }
+ 
+ String retorno;
     public TextField(String Formulario,String Pergunta){
         f= new JFrame(Formulario);
         
@@ -32,9 +42,10 @@ public class TextField implements ActionListener {
         
         
     }
-    
+  
     public void actionPerformed(ActionEvent ae){
         JOptionPane.showMessageDialog(null, tf.getText());
+        this.setRetorno(tf.getText());
         f.dispose();
     }
     
