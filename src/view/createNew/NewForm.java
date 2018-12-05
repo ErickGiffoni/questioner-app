@@ -1,5 +1,6 @@
 package view.createNew;
 
+import exceptions.DescricaoObrigatoriaNaoInformadaException;
 import exceptions.NomeNaoInformadoException;
 import formularios.Formulario;
 import java.text.DateFormat;
@@ -125,11 +126,15 @@ public class NewForm extends javax.swing.JFrame {
         }catch(NomeNaoInformadoException e){
             JOptionPane.showMessageDialog(null, "O titulo do formulário deve ser informado.");
         }//excecao de nome
-        //try{
-            
-       // }catch(){
-            
-       // }//excecao de enunciado
+        try{
+            if( txtTitle1.getText().equals("") == true ){
+                excecao = false;
+                throw new DescricaoObrigatoriaNaoInformadaException();
+            }
+       }catch(DescricaoObrigatoriaNaoInformadaException e){
+            JOptionPane.showMessageDialog(null, "A descrição do formulário deve ser informada.");
+
+       }//excecao de enunciado
        // try{
             
        // }catch(){
