@@ -1,8 +1,10 @@
 package view.createNew;
 
+import exceptions.NomeNaoInformadoException;
 import formularios.Formulario;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import javax.swing.JOptionPane;
 
 public class NewForm extends javax.swing.JFrame {
 
@@ -114,11 +116,32 @@ public class NewForm extends javax.swing.JFrame {
 
     private void submitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtnActionPerformed
         // Implementar exceções de criação do formulário
+        boolean excecao = true;//verificar se houve excecoes -> true = nao houve
+        try{
+            if( txtTitle.getText().equals("") == true ){
+                excecao = false;
+                throw new NomeNaoInformadoException();
+            }
+        }catch(NomeNaoInformadoException e){
+            JOptionPane.showMessageDialog(null, "O titulo do formulário deve ser informado.");
+        }//excecao de nome
+        //try{
+            
+       // }catch(){
+            
+       // }//excecao de enunciado
+       // try{
+            
+       // }catch(){
+            
+       // }//excecao de data
+       if(excecao){
         SimpleDateFormat init = new SimpleDateFormat(txtInitDate.getText());//pega a data inicial
         SimpleDateFormat end = new SimpleDateFormat(txtEndDate.getText());//pega a data final
         Formulario form = new Formulario(txtTitle.getText(), txtTitle1.getText(), init, end);//cria o formulario com nome, enun, dataIni, dataFin
         SelectQuestion selectQuestion = new SelectQuestion();
         selectQuestion.setVisible(true);
+       }
     }//GEN-LAST:event_submitBtnActionPerformed
 
     public static void main(String args[]) {
