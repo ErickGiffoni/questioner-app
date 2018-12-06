@@ -92,8 +92,8 @@ public class CheckBox implements ItemListener, ActionListener {
         f.dispose();
     }
 
-//    public static void main(String[] args) {
-//        String[] v = {"Oi", "Vivo", "Tim", "Claro", "Nextel"};
-//        CheckBox cb = new CheckBox("Formulario", "Operadora", v);
-//    }
+    public static void main(String[] args) {
+        String[] v = {"Oi", "Vivo", "Tim", "Claro", "Nextel"};
+        CheckBox cb = new CheckBox("Formulario", "Operadora", v);
+    }
 }
