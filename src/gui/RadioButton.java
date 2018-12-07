@@ -35,7 +35,7 @@ public class RadioButton implements ActionListener {
              
         
     }
-
+//m
     public void initGui() {
         f = new JFrame(Formulario);
         f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
