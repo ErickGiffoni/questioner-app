@@ -15,7 +15,8 @@ public class ComboBox implements ItemListener, ActionListener {
     JLabel lbl;
     JFrame f;
     JButton jbtn = new JButton("ok");
-    String retorno;
+   private String retorno,formulario,pergunta;
+   private String[] vetor= new String[0];
 
     public String getRetorno() {
         return retorno;
@@ -24,10 +25,17 @@ public class ComboBox implements ItemListener, ActionListener {
     public void setRetorno(String retorno) {
         this.retorno = retorno;
     }
-    public ComboBox(String formulario, String pergunta, String[] vetor) {
+
+    public ComboBox(String formulario, String pergunta,String [] vetor) {
+        this.formulario = formulario;
+        this.pergunta = pergunta;
+        this.vetor = vetor;
+    }
+   
+    public void initGui(){
         f = new JFrame(formulario);
         f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        f.setLayout(new FlowLayout(FlowLayout.CENTER));
+        f.setLayout(new FlowLayout(FlowLayout.LEFT));
         cb = new JComboBox<>();
         lbl = new JLabel(pergunta);
 
@@ -35,16 +43,17 @@ public class ComboBox implements ItemListener, ActionListener {
             cb.addItem(s);
         }
        
-        f.add(cb);
         f.add(lbl);
+        f.add(cb);
+        
         jbtn.addActionListener(this);
         f.add(jbtn);
         cb.addItemListener(this);
-        f.setSize(300, 150);
+        f.setSize(600, 150);
         f.setVisible(true);
 
+    
     }
-
     public void itemStateChanged(ItemEvent ie) {
        Object item = cb.getSelectedItem();
         lbl.setText("selecionado: " + item);
@@ -57,7 +66,9 @@ public class ComboBox implements ItemListener, ActionListener {
         String s = e.getActionCommand();
         if(s.equals("ok"))
         {
-            JOptionPane.showMessageDialog(null, cb.getSelectedItem());
+            String r;
+            r = pergunta +" "+ cb.getSelectedItem();
+            JOptionPane.showMessageDialog(null,r );
             f.dispose();
         }
        
@@ -65,7 +76,8 @@ public class ComboBox implements ItemListener, ActionListener {
     
 //    public static void main(String[] args) {
 //        String[] v = {"oi", "claro", "tim", "vivo"};
-//        ComboBox comboBox = new ComboBox("formulario", "sua operadora", v);
+//        ComboBox comboBox = new ComboBox("formulario", "Qual é a sua operadoratelefonica", v);
+//        comboBox.initGui();
 //    }
 
 
