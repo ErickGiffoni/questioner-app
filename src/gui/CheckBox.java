@@ -15,8 +15,10 @@ public class CheckBox implements ItemListener, ActionListener {
     JLabel lbl;
     JFrame f;
     JButton btn = new JButton("Confirma");
-    ArrayList<String> as = new ArrayList<String>();
-    String [] retorno= new String[0];
+    ArrayList<String> as = new ArrayList<>();
+   private String [] retorno= new String[0], vetor= new String[0];
+    private String FormularioNome,Questao;
+    
 
     public String[] getRetorno() {
         return retorno;
@@ -26,7 +28,14 @@ public class CheckBox implements ItemListener, ActionListener {
         this.retorno = retorno;
     }
     public CheckBox(String FormularioNome, String Questao, String[] vetor) {
-        f = new JFrame(FormularioNome);
+        this.FormularioNome = FormularioNome;
+        this.Questao = Questao;
+        this.vetor= vetor;
+       }
+
+    
+    public void initGui(){
+     f = new JFrame(FormularioNome);
         f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         JPanel p = new JPanel(new GridLayout(vetor.length + 3, 1));
         JCheckBox cb[] = new JCheckBox[vetor.length];
@@ -52,8 +61,9 @@ public class CheckBox implements ItemListener, ActionListener {
         f.add(p);
         f.setSize(300, 200);
         f.setVisible(true);
-    }
-
+    
+    
+    };
     public void itemStateChanged(ItemEvent ie) {
         JCheckBox rb = (JCheckBox) ie.getSource();
         int state = ie.getStateChange();
@@ -92,8 +102,9 @@ public class CheckBox implements ItemListener, ActionListener {
         f.dispose();
     }
 
-    public static void main(String[] args) {
-        String[] v = {"Oi", "Vivo", "Tim", "Claro", "Nextel"};
-        CheckBox cb = new CheckBox("Formulario", "Operadora", v);
-    }
+//    public static void main(String[] args) {
+//        String[] v = {"Oi", "Vivo", "Tim", "Claro", "Nextel"};
+//        CheckBox cb = new CheckBox("Formulario", "Operadora", v);
+//        cb.initGui();
+//    }
 }
