@@ -25,17 +25,17 @@ public class JOAberta extends Questao {
     public JOAberta(String nome, String enunciado) {
         super(nome, enunciado);
     }
-    public void chamaGui(){
+    public void initGui(){
         String tmp;
         String e = getEnunciado(), t= getNome();
         tmp = JOptionPane.showInputDialog(null, e, t, JOptionPane.PLAIN_MESSAGE);
         setResposta(tmp);
     }
     
-    public static void main(String[] args) {
-        JOAberta joa = new JOAberta("titulo","seu nome");
-        joa.chamaGui();
-        System.out.println(joa.getResposta());
-    }
+//    public static void main(String[] args) {
+//        JOAberta joa = new JOAberta("titulo","seu nome");
+//        joa.chamaGui();
+//        System.out.println(joa.getResposta());
+//    }
             
 }
